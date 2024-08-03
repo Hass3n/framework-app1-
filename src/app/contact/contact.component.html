@@ -1,0 +1,39 @@
+<section class="py-5">
+<div class="container py-5">
+    <h1 class="text-uppercase fw-bold  mt-3 text-center  pt-5 " [style.color]="color">conatct section
+
+
+    </h1>
+    <div class="profile-line d-flex justify-content-center align-items-center">
+        <h2 [style.background-color]="color"></h2>
+        <h2 class=" p-2 " >
+            <i class="fa-solid fa-star  fa-2xs " [style.color]="color"></i>
+
+        </h2>
+        <h2 [style.background-color]="color"></h2>
+    </div>
+
+    <div class="form-contact row ">
+        <div class="col-sm-6 m-auto col-12">
+
+              <label for="exampleInputname" id="name" [class]=" isfoc==0?'form-label position-relative   top-0  opacity-100':'form-label position-relative lb_top' " >UserName</label>
+              <input  type="text" class="form-control mb-3 " id="exampleInputname" aria-describedby="emailHelp" placeholder="userName" (keydown)="keyboardevent($event,0)" >
+           
+              <label for="exampleInputmail" id="mail" [class]=" isfoc==1?'form-label position-relative   top-0  opacity-100':'form-label position-relative lb_top' " >UserEmail</label>
+              <input  type="text" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="userEmail" (keydown)="keyboardevent($event,1)"  >
+           
+            
+              <label for="exampleInputage" id="age" [class]=" isfoc==2?'form-label position-relative   top-0  opacity-100':'form-label position-relative lb_top' " >UserAge</label>
+              <input  type="text" class="form-control mb-3" id="exampleInputage" aria-describedby="emailHelp" placeholder="userAge" (keydown)="keyboardevent($event,2)"  >
+           
+            
+               
+              <label for="exampleInputpassword" id="password" [class]=" isfoc==3?'form-label position-relative   top-0  opacity-100':'form-label position-relative lb_top' " >UserPassword</label>
+              <input  type="password" autocomplete="false" class="form-control mb-3" id="exampleInputpassword" aria-describedby="emailHelp" placeholder="userPassword" (keydown)="keyboardevent($event,3)"  >
+           
+              <button type="submit" class="btn text-white">Send Maessage</button>
+
+        </div>
+    </div>
+</div>
+</section>

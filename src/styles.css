@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+nav,footer
+{
+    background-color: #2C3E50;
+}
+
+.home-profile,.about,.overlay,.btn,.bglinks
+{
+    background-color: #1ABC9C;
+}
+.profile-line h2:nth-child(1)
+{
+    width:100px;
+    height: 5px;
+    background-color: #fff;
+}
+
+.profile-line h2:nth-child(3)
+{
+    width:100px;
+    height: 5px;
+    background-color: #fff;
+
+}
+
+.links div
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: 2px solid #fff;
+
+}
+
+.copy
+{
+    background-color: #1A252F;
+}
+
+
+
+
+.overlay
+{
+    background-color: rgba(26, 188, 156,.9);
+    transition: opacity .5s;
+
+    opacity: 0;
+}
+
+.port-card:hover .overlay
+{
+
+
+    opacity: 1;
+
+}
+
+.overlay i
+{
+    font-size: 3.125rem;
+}
+
+.form-control
+{
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 2px solid #eef0f2;
+    border-radius: 0px !important;
+}
+
+.form-control:focus {
+    box-shadow:0 0 0 0 #fff !important;
+    border-color:#EEF0F2
+
+
+
+ 
+}
+
+
+.lb_top
+{
+    
+    top: 15px;
+    opacity: 0;
+
+}
+
+label
+{
+    transition:  top .5s , opacity .5s;
+
+}
+
+
+
