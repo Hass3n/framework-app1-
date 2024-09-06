@@ -1,4 +1,4 @@
-<section class="py-5">
+<section class="py-5 " >
     <div class="container py-5">
         <h1 class="text-uppercase fw-bold  mt-3 text-center  pt-5 " [style.color]="color">portfolio component
 
@@ -13,66 +13,33 @@
         </div>
 
         <div class="row flex-wrap g-5">
-            <div class=" col-12 col-sm-6 col-lg-4">
+           @for (item of assetimage; track $index) {
+            <div class=" col-12 col-sm-6 col-lg-4 " (click)="ishide=false;modelImage=item">
 
                 <div class="port-card rounded-2 overflow-hidden position-relative">
-                    <img src="../../assets/images/poert1.png" alt="poert1" class="w-100">
+                    <img [src]="item" alt="poert1" class="w-100">
                     <div class="overlay position-absolute start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-plus text-white "></i>
                     </div>
                 </div>
             </div>
+           }
         
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="port-card rounded-2 overflow-hidden position-relative">
-                    <img src="../../assets/images/port2.png" alt="poert1" class="w-100">
-                    <div class="overlay position-absolute start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-plus text-white "></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="port-card rounded-2 overflow-hidden position-relative">
-                    <img src="../../assets/images/port3.png" alt="poert1" class="w-100">
-                    <div class="overlay position-absolute start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-plus text-white "></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="port-card rounded-2 overflow-hidden position-relative">
-                    <img src="../../assets/images/poert1.png" alt="poert1" class="w-100">
-                    <div class="overlay position-absolute start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-plus text-white "></i>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="port-card rounded-2 overflow-hidden position-relative">
-                    <img src="../../assets/images/port2.png" alt="poert1" class="w-100">
-                    <div class="overlay position-absolute start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-plus text-white "></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="port-card rounded-2 overflow-hidden position-relative">
-                    <img src="../../assets/images/port3.png" alt="poert1" class="w-100">
-                    <div class="overlay position-absolute start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-plus text-white "></i>
-                    </div>
-                </div>
-            </div>
+         
             
         </div>
     </div>
     
+
+    <div
+
+    (click)="hideModel($event.target,elemetImage)"
+    
+    [class.d-none]="ishide" class="z-3 back position-fixed start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center h-100" >
+        <img #elemetImage [src]="modelImage" alt="">
+     </div>
+
+
 </section>
+
 
