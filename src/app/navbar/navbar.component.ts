@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 
@@ -11,7 +11,35 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent {
   
+   isremove:boolean=true;
+
+  removepadding()
+  {
+
+
+    this.isremove=true;
+
+    console.log('hiii');
+    
+  }
  
+
+    // HostListener for window scroll event
+    @HostListener('window:scroll', ['$event'])
+    onWindowScroll(event: Event): void {
+
+
+      if(document.documentElement.scrollTop>0)
+      {
+
+        this.isremove=false
+
+      }
+      else
+      {
+        this.isremove=true;
+      }
+    }
   
 
 }
